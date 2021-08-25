@@ -23,10 +23,16 @@ create table `products`(
     `price` double precision not null,
     `categoryid` int not null ,
     `authorid` int not null,
+    `discountid` int not null,
     `description` varchar(50) not null,
      PRIMARY KEY (`productid`)
 );
 
+create table `discount`(
+	`discountid` int not null auto_increment,
+    `valuediscount` int not null,
+    PRIMARY KEY (`discountid`)
+);
 create table `author`(
 	`authorid` int not null auto_increment,
     `authorname` varchar(50) not null,
